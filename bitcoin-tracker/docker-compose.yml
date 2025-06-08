@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    container_name: bitcoin-db
+    restart: always
+    environment:
+      POSTGRES_DB: bitcoin
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  tracker:
+    build: .
+    container_name: bitcoin-tracker
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_NAME: bitcoin
+      DB_USER: user
+      DB_PASSWORD: pass
+
+volumes:
+  pgdata:
