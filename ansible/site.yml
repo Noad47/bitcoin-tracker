@@ -1,1 +1,5 @@
-
+- name: Deploy bitcoin tracker
+  hosts: bitcoin_servers
+  become: yes
+  roles:
+    - deploy_app
