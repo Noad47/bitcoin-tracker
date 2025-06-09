@@ -58,16 +58,20 @@ All services are orchestrated with Docker Compose.
 ## 📁 Project Structure
 
 ```
-.
-├── ansible/
-│   ├── inventory
-│   └── site.yml
-├── docker/
-│   └── Dockerfiles and configs
-├── src/
-│   └── fetcher.py
-├── README.md
-└── docker-compose.yml
+├── bitcoin-tracker 
+│   ├── README.md
+│   ├── ansible
+│   │   ├── inventory
+│   │   ├── roles
+│   │   │   └── deploy_app
+│   │   │       └── tasks
+│   │   │           └── main.yml
+│   │   └── site.yml
+│   └── bitcoin-tracker
+│       ├── Dockerfile
+│       ├── bitcoin_tracker.py
+│       ├── docker-compose.yml
+│       └── requirements.txt
 ```
 
 ---
