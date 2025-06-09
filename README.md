@@ -79,9 +79,9 @@ All services are orchestrated with Docker Compose.
 ## 📈 Sample Output
 
 ```bash
-[INFO] Current BTC: 67,234.45 USD
-[INFO] Min: 66,980.12 | Max: 67,234.45 | Avg: 67,101.98
-[RECOMMENDATION] SELL
+2025-06-09T13:37:08.006704 - New Bitcoin price recorded: $107648
+ Current: $107648.00 | Max: $107648.00 | Min: $107637.00 | Avg: $107642.50
+Recommendation: Sell
 ```
 
 ---
