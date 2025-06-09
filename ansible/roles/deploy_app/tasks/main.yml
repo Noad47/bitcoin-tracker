@@ -1,1 +1,24 @@
+- name: Install Docker
+  ansible.builtin.yum:
+    name: docker
+    state: present
 
+- name: Start Docker
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: true
+
+- name: Copy project folder to server
+  ansible.builtin.copy:
+    src: ../../bitcoin-tracker/
+    dest: /opt/bitcoin-tracker/
+    owner: ec2-user
+    group: ec2-user
+    mode: '0755'
+
+- name: Run docker-compose
+  ansible.builtin.shell: |
+    docker compose up -d
+  args:
+    chdir: /opt/bitcoin-tracker/
