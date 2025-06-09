@@ -49,8 +49,7 @@ ansible-playbook -i ansible/inventory ansible/site.yml
 ## 🐳 Docker Architecture
 
 - `bitcoin-fetcher`: Pulls BTC prices and logs stats
-- `db`: Database to store the prices (SQLite/PostgreSQL)
-- `logger`: (Optional) logs to a file or dashboard
+- `db`: Database to store the prices (PostgreSQL)
 
 All services are orchestrated with Docker Compose.
 
