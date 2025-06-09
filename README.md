@@ -1,68 +1,85 @@
-# Bitcoin Tracker
+🪙 Bitcoin Tracker with Docker & Ansible
+This project tracks the current Bitcoin value from a public REST API every 1 minute, stores the values in a database, and provides stats like min, max, and average. Based on the latest value, it recommends whether to buy or sell.
 
-Bitcoin Tracker is a simple Python-based application that fetches and displays the current Bitcoin price using a public API.  
-This project includes infrastructure automation with Ansible to streamline deployment using Docker.
+All components run inside Docker containers. Bonus features include Ansible automation.
 
----
+📦 Features
+Fetches Bitcoin price every minute from a REST API
 
-## 📁 Project Structure
+Stores results in a database (SQLite/PostgreSQL/etc.)
 
-bitcoin-tracker/
-├── README.md
-├── ansible/
-│ ├── inventory
-│ ├── roles/
-│ │ └── deploy_app/
-│ │ └── tasks/
-│ │ └── main.yml
-│ └── site.yml
-└── bitcoin-tracker/
-├── Dockerfile
-├── bitcoin_tracker.py
-├── docker-compose.yml
-└── requirements.txt
+Calculates min, max, and average price from start
 
-yaml
+Gives buy/sell recommendation after each update
+
+Dockerized solution (multi-container support)
+
+Ansible Playbook for full setup automation
+
+🚀 Quick Start Guide
+1. Clone the Repository
+bash
 Copy
 Edit
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-Make sure Git is installed, then run:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/bitcoin-tracker.git
-cd bitcoin-tracker
-Replace YOUR_USERNAME with your actual GitHub username if public.
-
-2. Install Ansible
-You can install Ansible with:
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+2. Install Ansible (if not already installed)
+Debian/Ubuntu:
 
 bash
 Copy
 Edit
 sudo apt update
 sudo apt install ansible -y
-On Amazon Linux or CentOS, use yum instead of apt.
-
-3. Run the Ansible Playbook
-To deploy the app using Ansible:
+macOS (with Homebrew):
 
 bash
 Copy
 Edit
+brew install ansible
+3. Run the Ansible Playbook
+bash
+Copy
+Edit
 ansible-playbook -i ansible/inventory ansible/site.yml
-This will build and run the application using the Docker setup.
+This will install Docker runtime (if needed), build the containers, and run the full system.
 
-🐳 Docker Notes
-The app is containerized using both Dockerfile and docker-compose.yml.
+🐳 Docker Architecture
+bitcoin-fetcher: Pulls BTC prices and logs stats
 
-The Ansible role deploy_app automates the deployment via Docker.
+db: Database to store the prices (SQLite/PostgreSQL)
 
-📬 Contact
-If you have any questions or suggestions, feel free to open an issue or contact the maintainer.
+logger: (Optional) logs to a file or dashboard
 
+All services are orchestrated with Docker Compose.
+
+📁 Project Structure
+css
+Copy
+Edit
+.
+├── ansible/
+│   ├── inventory
+│   └── site.yml
+├── docker/
+│   └── Dockerfiles and configs
+├── src/
+│   └── fetcher.py
+├── README.md
+└── docker-compose.yml
+📈 Sample Output
+bash
+Copy
+Edit
+[INFO] Current BTC: 67,234.45 USD
+[INFO] Min: 66,980.12 | Max: 67,234.45 | Avg: 67,101.98
+[RECOMMENDATION] SELL
+✅ Requirements
+Git
+
+Ansible
+
+Docker (installed by Ansible if missing)
+
+📬 Contributions
+Feel free to fork, improve, or raise issues via GitHub Issues.
