@@ -60,7 +60,7 @@ while True:
 
         max_p, min_p, avg_p = get_stats()
         action = "Buy" if price < avg_p else "Sell"
-        print(f"🔍 Current: ${price:.2f} | Max: ${max_p:.2f} | Min: ${min_p:.2f} | Avg: ${avg_p:.2f}")
+        print(f" Current: ${price:.2f} | Max: ${max_p:.2f} | Min: ${min_p:.2f} | Avg: ${avg_p:.2f}")
         print(f"Recommendation: {action}")
     else:
         print("Failed to fetch Bitcoin price.")
