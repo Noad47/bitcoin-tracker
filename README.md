@@ -24,6 +24,8 @@ All components run inside Docker containers. Bonus features include Ansible auto
 ### 1. Clone the Repository
 
 ```bash
+sudo apt update
+sudo yum install -y git
 git clone https://github.com/Noad47/bitcoin-tracker.git
 cd bitcoin-tracker
 ```
