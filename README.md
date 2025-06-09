@@ -15,6 +15,7 @@ All components run inside Docker containers. Bonus features include Ansible auto
 - Gives buy/sell recommendation after each update
 - Dockerized solution (multi-container support)
 - Ansible Playbook for full setup automation
+> 💡 You can modify the `inventory` file inside the `ansible/` directory to apply the configuration to additional remote servers.
 
 ---
 
