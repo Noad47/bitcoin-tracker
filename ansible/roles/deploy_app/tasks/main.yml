@@ -1,24 +1,34 @@
 - name: Install Docker
-  ansible.builtin.yum:
+  yum:
     name: docker
     state: present
 
 - name: Start Docker
-  ansible.builtin.service:
+  service:
     name: docker
     state: started
     enabled: true
 
-- name: Copy project folder to server
-  ansible.builtin.copy:
-    src: ../../bitcoin-tracker/
-    dest: /opt/bitcoin-tracker/
-    owner: ec2-user
-    group: ec2-user
+- name: Create directory for Docker CLI plugins
+  file:
+    path: /usr/local/lib/docker/cli-plugins
+    state: directory
     mode: '0755'
 
+- name: Install Docker Compose
+  get_url:
+    url: https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64
+    dest: /usr/local/lib/docker/cli-plugins/docker-compose
+    mode: '0755'
+
+- name: Clone bitcoin-tracker repository from GitHub
+  git:
+    repo: https://github.com/Noad47/bitcoin-tracker.git
+    dest: /opt/bitcoin-tracker
+    version: main
+    force: yes
+
 - name: Run docker-compose
-  ansible.builtin.shell: |
-    docker compose up -d
+  shell: docker compose up -d
   args:
-    chdir: /opt/bitcoin-tracker/
+    chdir: /opt/bitcoin-tracker/bitcoin-tracker/
