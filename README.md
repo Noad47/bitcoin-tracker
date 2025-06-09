@@ -91,7 +91,7 @@ Recommendation: Sell
 You can monitor the logs using any of the following methods:
 
 ```bash
-docker-compose logs -f
+sudo docker logs -f bitcoin-tracker
 ```
 
 ---
