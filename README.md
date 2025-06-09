@@ -23,8 +23,8 @@ All components run inside Docker containers. Bonus features include Ansible auto
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/Noad47/bitcoin-tracker.git
+cd bitcoin-tracker
 ```
 
 ### 2. Install Ansible (if not already installed)
@@ -33,11 +33,6 @@ cd YOUR_REPO_NAME
 ```bash
 sudo apt update
 sudo apt install ansible -y
-```
-
-**macOS (with Homebrew):**
-```bash
-brew install ansible
 ```
 
 ### 3. Run the Ansible Playbook
