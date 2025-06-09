@@ -10,7 +10,7 @@ All components run inside Docker containers. Bonus features include Ansible auto
 ## 📦 Features
 
 - Fetches Bitcoin price every minute from a REST API
-- Stores results in a database (SQLite/PostgreSQL/etc.)
+- Stores results in a database (PostgreSQL)
 - Calculates min, max, and average price from start
 - Gives buy/sell recommendation after each update
 - Dockerized solution (multi-container support)
