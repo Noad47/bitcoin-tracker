@@ -36,7 +36,6 @@ sudo apt install -y git
 ### 2. Clone the Repository
 
 ```bash
-# Clone the repository:
 git clone https://github.com/Noad47/bitcoin-tracker.git
 cd bitcoin-tracker
 ```
