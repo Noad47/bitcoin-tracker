@@ -22,8 +22,8 @@ All components run inside Docker containers. Bonus features include Ansible auto
 ## 🚀 Quick Start Guide
 ### 1. Install Git
 
+Install Git (choose the command according to your operating system):
 ```bash
-# Install Git (choose the command according to your operating system):
 
 # For Amazon Linux / CentOS / RHEL:
 sudo yum update -y
