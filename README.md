@@ -28,7 +28,8 @@ All components run inside Docker containers. Bonus features include Ansible auto
 # For Amazon Linux / CentOS / RHEL:
 sudo yum update -y
 sudo yum install -y git
-
+```
+```bash
 # For Debian / Ubuntu:
 sudo apt update
 sudo apt install -y git
@@ -46,7 +47,8 @@ cd bitcoin-tracker
 ```bash
 # For Amazon Linux / CentOS / RHEL:
 sudo yum install -y ansible
-
+```
+```bash
 # For Debian / Ubuntu:
 sudo apt update
 sudo apt install -y ansible
