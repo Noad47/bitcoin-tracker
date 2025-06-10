@@ -117,15 +117,3 @@ sudo docker logs -f bitcoin-tracker
 - Docker (installed by Ansible if missing)
 
 ---
-
-## 📬 Contributions
-
-Feel free to fork, improve, or raise issues via [GitHub Issues](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/issues).
-
-
-Ansible
-
-Docker (installed by Ansible if missing)
-
-📬 Contributions
-Feel free to fork, improve, or raise issues via GitHub Issues.
