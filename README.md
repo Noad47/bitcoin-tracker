@@ -24,18 +24,29 @@ All components run inside Docker containers. Bonus features include Ansible auto
 ### 1. Clone the Repository
 
 ```bash
-sudo apt update
+# For Amazon Linux / CentOS / RHEL:
+sudo yum update -y
 sudo yum install -y git
+
+# For Debian / Ubuntu:
+sudo apt update
+sudo apt install -y git
+
+# Clone the repository:
 git clone https://github.com/Noad47/bitcoin-tracker.git
 cd bitcoin-tracker
 ```
 
 ### 2. Install Ansible (if not already installed)
 
-**Debian/Ubuntu:**
 ```bash
+# Amazon Linux:
+sudo amazon-linux-extras enable ansible2
+sudo yum install -y ansible
+
+# Debian / Ubuntu:
 sudo apt update
-sudo apt install ansible -y
+sudo apt install -y ansible
 ```
 
 ### 3. Run the Ansible Playbook
