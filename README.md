@@ -102,7 +102,7 @@ Recommendation: Sell
 
 ### 🔍 View Live Logs
 
-You can monitor the logs using any of the following methods:
+You can monitor the logs using the following method:
 
 ```bash
 sudo docker logs -f bitcoin-tracker
