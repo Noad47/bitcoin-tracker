@@ -23,14 +23,13 @@ All components run inside Docker containers. Bonus features include Ansible auto
 ### 1. Install Git
 
 Install Git (choose the command according to your operating system):
+For Amazon Linux / CentOS / RHEL:
 ```bash
-
-# For Amazon Linux / CentOS / RHEL:
 sudo yum update -y
 sudo yum install -y git
 ```
+For Debian / Ubuntu:
 ```bash
-# For Debian / Ubuntu:
 sudo apt update
 sudo apt install -y git
 ```
@@ -43,13 +42,13 @@ cd bitcoin-tracker
 ```
 
 ### 3. Install Ansible (if not already installed)
-
+For Amazon Linux / CentOS / RHEL:
 ```bash
-# For Amazon Linux / CentOS / RHEL:
 sudo yum install -y ansible
 ```
+
+For Debian / Ubuntu:
 ```bash
-# For Debian / Ubuntu:
 sudo apt update
 sudo apt install -y ansible
 ```
