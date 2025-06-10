@@ -7,7 +7,7 @@ All components run inside Docker containers. Bonus features include Ansible auto
 
 ---
 
-## 📦 Features
+## Features
 
 - Fetches Bitcoin price every minute from a REST API
 - Stores results in a database (PostgreSQL)
@@ -15,11 +15,11 @@ All components run inside Docker containers. Bonus features include Ansible auto
 - Gives buy/sell recommendation after each update
 - Dockerized solution (multi-container support)
 - Ansible Playbook for full setup automation
-> 💡 You can modify the `inventory` file inside the `ansible/` directory to apply the configuration to additional remote servers.
+>  You can modify the `inventory` file inside the `ansible/` directory to apply the configuration to additional remote servers.
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 ### 1. Install Git
 
  For Amazon Linux / CentOS / RHEL:
@@ -62,7 +62,7 @@ ansible-playbook -i ansible/inventory ansible/site.yml
 
 ---
 
-## 🐳 Docker Architecture
+## Docker Architecture
 
 - `bitcoin-fetcher`: Pulls BTC prices and logs stats
 - `db`: Database to store the prices (PostgreSQL)
@@ -71,7 +71,7 @@ All services are orchestrated with Docker Compose.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── bitcoin-tracker 
@@ -92,7 +92,7 @@ All services are orchestrated with Docker Compose.
 
 ---
 
-## 📈 Sample Output
+## Sample Output
 
 ```bash
 2025-06-09T13:37:08.006704 - New Bitcoin price recorded: $107648
@@ -100,7 +100,7 @@ All services are orchestrated with Docker Compose.
 Recommendation: Sell
 ```
 
-### 🔍 View Live Logs
+### View Live Logs
 
 You can monitor the logs using the following method:
 
@@ -110,7 +110,7 @@ sudo docker logs -f bitcoin-tracker
 
 ---
 
-## ✅ Requirements
+## Requirements
 
 - Git
 - Ansible
